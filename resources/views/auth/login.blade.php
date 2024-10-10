@@ -2,6 +2,15 @@
     <!-- Session Status -->
     <x-auth-session-status class="mb-4" :status="session('status')" />
 
+    <!-- Assigned Github Login Link -->
+    <div class="text-center">
+        <a href="{{ route('github.login') }}">
+            <img src="https://icon-library.com/images/github-icon-png/github-icon-png-6.jpg"
+                 alt="Github Icon" width="50px"
+                 class="mx-auto">
+        </a>
+    </div>
+
     <form method="POST" action="{{ route('login') }}">
         @csrf
 
